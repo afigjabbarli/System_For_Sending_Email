@@ -1,0 +1,136 @@
+﻿@using System_for_Sending_E_mail.ViewModels.User.Email;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<ListEmailViewModel>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" asp-append-version="true">
+    <title>GMail</title>
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="row">
+                <div class="col-9">
+                    <div class="gmail-logo">
+                        <img src="./assets/images/Gmail_Logo_512px.png" alt="GMail logo">
+                        <p>Gmail</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="ca-logo">
+                        <img src="./assets/images/Code Academy.svg" alt="Code Academy logo">
+                        <div class="cricle">
+                            <p>MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-bottom">
+            <div class="row-top">
+                <a asp-controller="Dashboard" asp-action="Add" class="Compose-tag">
+
+
+                    <i class="fa-solid fa-pencil fa-2xl"></i>
+                    <p>Compose</p>
+                </a>
+            </div>
+            <div class="row-bottom">
+                <div class="header">
+                    <div class="title">
+                        <p>Subject</p>
+                    </div>
+                    <div class="reciever-emails">
+                        <p>To</p>
+                    </div>
+                    <div class="sent-date">
+                        <p>Sent Date</p>
+                    </div>
+                    <div class="more-details">
+                        <p>More</p>
+                    </div>
+                </div>
+
+                @foreach (var item in Model)
+                {
+                    <div class="emails">
+                        <div class="email-title">
+                            <div class="div">
+                                <p>
+                                    @{
+                                        string Title = item.Title;
+                                        string[] words = Title.Split(' ');
+                                        string firstFiveWords = string.Join(" ", words.Take(5));
+                                    }
+
+                                     @firstFiveWords
+                                </p>
+                            </div>
+                        </div>
+                        <form asp-controller="Dashboard" asp-action="Details" asp-route-id="@item.Id" method="POST" class="d-none" id="remove-form-@item.Id">
+                            <input type="hidden" name="id" value="@item.Id">
+                        </form>
+                        <div class="name-reciever-emails">
+                            <div class="div">
+                                <p>
+                                    @{
+                                        string text = " ";
+                                        foreach (var Recipient in item.Recipients)
+                                        {
+                                            text += $" | {Recipient}";
+                                        }
+                                        
+                                    }
+                                       @text
+                                </p>
+                            </div>
+                        </div>
+                        <div class="email-sent-date">
+                            <div class="div">
+                                <p>
+                                    @item.DateSent.ToString("dd/MM/yyyy")
+                                </p>
+                                <i class="fa-regular fa-clock fa-2xl" style="color: #ffffff;"></i>
+                            </div>
+                        </div>
+                        
+
+                            <form asp-controller="Dashboard" class="email-more-details" asp-action="Details" asp-route-id="@item.Id" method="post">
+                               
+                                <input type="hidden" name="id" value="@item.Id">
+                                <button type="submit" class="more-details-link-tag div">
+                                    <p>More</p>
+                                    <i class="fa-solid fa-circle-info fa-2xl" style="color: #005eff;"></i>
+                                </button>
+                            </form>
+
+
+
+                        
+                    </div>
+
+                }
+
+               
+
+
+
+               
+
+
+               
+
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+

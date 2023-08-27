@@ -1,0 +1,330 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container-header{
+    width: 90%;
+    height: 200px;
+    margin: 0px auto;
+    background-color: rgba(168, 168, 168, 0.542);
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+    border: 1px solid rgba(0, 0, 0, 0.441);
+}
+.row{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    justify-content: space-around;
+}
+.col-3{
+    width: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.col-9{
+    width: 62%;
+}
+.col-9 .gmail-logo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.col-9 .gmail-logo img{
+    height: 125px;
+    width: 150px;
+}
+.col-9 .gmail-logo p{
+    font : normal 100px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+    margin-left: 25px;
+}
+.col-3 .ca-logo{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rgba(0, 0, 0, 0.441);
+    border-radius: 8px;
+    background-color: white;
+}
+.col-3 .ca-logo img{
+    width: 73%;
+    height: 75px;
+}
+.col-3 .ca-logo .cricle{
+    width: 60px;
+    height: 60px;
+    background-color:darkorchid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-3 .ca-logo .cricle p{
+    color: white;
+    font : normal 30px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+}
+.col-3 .ca-logo:hover{
+    cursor: pointer;
+}
+.container-bottom{
+    width: 90%;
+    margin: 0px auto;
+    
+}
+.container-bottom .row-top{
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    
+}
+.container-bottom .row-top .Compose-tag{
+    width: 30%;
+    height: 100px;
+    display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   background-color: #c2e7ff;
+   border-radius: 25px;
+   padding: 15px;
+ 
+}
+.container-bottom .row-top .Compose-tag{
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.441);
+}
+.container-bottom .row-top .Compose-tag i{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+.container-bottom .row-top .Compose-tag p{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    font : normal 50px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+}
+.container-bottom .row-top .Compose-tag:hover{
+    background-color: #58b0ea;
+  
+    box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+}
+.container-bottom .row-bottom{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.441);
+    height: 3000px;
+    background-color: rgba(168, 168, 168, 0.542);
+}
+.container-bottom .row-bottom .header{
+    height: 100px;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.441);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container-bottom .row-bottom .header .title{
+    width: 20%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c2e7ff;
+    border-radius: 25px;
+    border:  3px solid gray;
+}
+.container-bottom .row-bottom .header .title:hover{
+    background-color: #58b0ea;
+    cursor: pointer;
+}
+.container-bottom .row-bottom .header .title p{
+    font : normal 36px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+}
+.container-bottom .row-bottom .header .reciever-emails{
+    width: 50%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c2e7ff;
+    border-radius: 25px;
+    border:  3px solid gray;
+}
+.container-bottom .row-bottom .header .reciever-emails:hover{
+    background-color: #58b0ea;
+    cursor: pointer;
+}
+.container-bottom .row-bottom .header .reciever-emails p{
+    font : normal 36px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+}
+.container-bottom .row-bottom .header .sent-date{
+    width: 15%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c2e7ff;
+    border-radius: 25px;
+    border:  3px solid gray;
+}
+.container-bottom .row-bottom .header .sent-date:hover{
+    background-color: #58b0ea;
+    cursor: pointer;
+}
+.container-bottom .row-bottom .header .sent-date p{
+    font : normal 36px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+}
+.container-bottom .row-bottom .header .more-details{
+    width: 10%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c2e7ff;
+    border-radius: 25px;
+    border:  3px solid gray;
+}
+.container-bottom .row-bottom .header .more-details:hover{
+    background-color: #58b0ea;
+    cursor: pointer;
+}
+.container-bottom .row-bottom .header .more-details p{
+    font : normal 36px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.709);
+}
+.container-bottom .row-bottom .emails{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border:  1px solid gray;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container-bottom .row-bottom .emails .email-title{
+    width: 20%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    border-right:  1px solid gray;
+}
+.container-bottom .row-bottom .emails .email-title .div{
+    height: 100px;
+    width: 100%;
+   border-radius: 16px;
+   background-color: white;
+   border:  3px solid gray;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+}
+.container-bottom .row-bottom .emails .email-title .div p{
+    font : normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.797);
+}
+.container-bottom .row-bottom .emails .name-reciever-emails{
+    width: 53%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    border-right:  1px solid gray;
+    padding-left: 10px;
+}
+.container-bottom .row-bottom .emails .name-reciever-emails .div{
+    height: 100px;
+    width: 100%;
+   border-radius: 16px;
+   background-color: white;
+   border:  3px solid gray;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+}
+.container-bottom .row-bottom .emails .name-reciever-emails .div p{
+    font : normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, 0.797);
+}
+.container-bottom .row-bottom .emails .email-sent-date{
+    width: 17%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    border-right:  1px solid gray;
+    padding-left: 10px;
+}
+.container-bottom .row-bottom .emails .email-sent-date .div{
+    height: 100px;
+    width: 100%;
+   border-radius: 16px;
+   background-color: #005eff;;
+   border:  3px solid gray;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 10px;
+}
+.container-bottom .row-bottom .emails .email-sent-date .div p{
+    font : normal 22px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: white;
+}
+.container-bottom .row-bottom .emails .email-more-details{
+    width: 10%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5px;
+   
+    padding-left: 10px;
+}
+.container-bottom .row-bottom .emails .email-more-details .more-details-link-tag{
+    width: 100%;
+    height: 60px;
+    border-radius: 16px;
+    border: 1px solid gray ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    background-color: white;
+    background-color: black;
+   
+}
+.container-bottom .row-bottom .emails .email-more-details .more-details-link-tag p{
+    font : normal 24px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    color: #005eff;
+    
+}
+.container-bottom .row-bottom .emails .email-more-details .more-details-link-tag:hover{
+    background-color: white;
+    cursor:pointer;
+}
+    
+   
