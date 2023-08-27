@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography.X509Certificates;
 using System_for_Sending_E_mail.Database;
+using System_for_Sending_E_mail.Services.Abstracts;
+using System_for_Sending_E_mail.Services.Concretes;
 
 namespace System_for_Sending_E_mail
 {
@@ -20,6 +22,10 @@ namespace System_for_Sending_E_mail
 
                    o.UseNpgsql(connectionString);
                });
+               
+
+               
+            
                
 
             var app = builder.Build();
