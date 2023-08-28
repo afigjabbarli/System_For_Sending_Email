@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using System.Security.Cryptography.X509Certificates;
+using Microsoft.Extensions.DependencyInjection;
 using System_for_Sending_E_mail.Database;
 using System_for_Sending_E_mail.Services.Abstracts;
 using System_for_Sending_E_mail.Services.Concretes;
@@ -21,12 +21,13 @@ namespace System_for_Sending_E_mail
                    var connectionString = "Server=localhost;Port=5432;Database=EmailSystemDataBase;User Id=postgres;Password=postgres;;";
 
                    o.UseNpgsql(connectionString);
-               });
-               
+               })
+           .AddScoped<IEMailService, EMailService>();
 
-               
-            
-               
+
+
+
+
 
             var app = builder.Build();
             app.UseStaticFiles();
